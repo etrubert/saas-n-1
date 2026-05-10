@@ -1,13 +1,17 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg: #efe9dc;
+  --bg-soft: #f5f0e4;
+  --bg-deep: #1f3a2d;
+  --bg-deep-2: #2d4a3a;
+  --paper: #fcf9f1;
+  --cream: #efe9dc;
+  --ink: #1f3a2d;
+  --ink-soft: #4a5a4f;
+  --muted: #8a857a;
+  --rule: rgba(31, 58, 45, 0.15);
+  --rule-strong: #1f3a2d;
+  --critical: #7a2a2a;
+  --on-deep: #efe9dc;
 }
 
 html {
@@ -24,9 +28,10 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +47,32 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.eyebrow {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.eyebrow-soft {
+  color: var(--muted);
+}
+
+button {
+  font-family: inherit;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--bg-deep);
+  color: var(--cream);
 }
